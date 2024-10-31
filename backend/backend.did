@@ -1,0 +1,13 @@
+type FoodEntry = 
+ record {
+   calories: float64;
+   carbs: float64;
+   fat: float64;
+   name: text;
+   protein: float64;
+   timestamp: int;
+ };
+service : {
+  addFoodEntry: (FoodEntry) -> ();
+  getFoodEntries: () -> (vec FoodEntry) query;
+}
